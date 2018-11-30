@@ -84,14 +84,16 @@ TreeNode * statement(void)
 TreeNode * if_stmt(void)
 { TreeNode * t = newStmtNode(IfK);
   match(IF);
+  match(LPAREN);
   if (t!=NULL) t->child[0] = exp();
-  match(THEN);
+  match(RPAREN);
+  //match(THEN);
   if (t!=NULL) t->child[1] = stmt_sequence();
   if (token==ELSE) {
     match(ELSE);
     if (t!=NULL) t->child[2] = stmt_sequence();
   }
-  match(END);
+  //match(END);
   return t;
 }
 
@@ -132,7 +134,7 @@ TreeNode * write_stmt(void)
 
 TreeNode * exp(void)
 { TreeNode * t = simple_exp();
-  if ((token==LT)||(token==EQ)) {
+  if ((token==LT)||(token==EQ)||(token==RT)) {
     TreeNode * p = newExpNode(OpK);
     if (p!=NULL) {
       p->child[0] = t;

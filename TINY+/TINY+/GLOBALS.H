@@ -33,7 +33,7 @@ typedef enum
     /* multicharacter tokens */
     ID,NUM,
     /* special symbols */
-    ASSIGN,EQ,LT,PLUS,MINUS,TIMES,OVER,LPAREN,RPAREN,SEMI,MOD
+    ASSIGN,EQ,LT,PLUS,MINUS,TIMES,OVER,LPAREN,RPAREN,SEMI,MOD,RT
    } TokenType;
 
 extern FILE* source; /* source code text file */
