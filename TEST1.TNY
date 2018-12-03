@@ -5,8 +5,8 @@
 read x; { input an integer }
 if ( x>0 ) { don't compute if x <= 0 }
   fact := 1;
-  while x>0 do 
+  do
     fact := fact * x;
     x := x - 1
-  endwhile
+  while ( x>0 );
   write fact;  { output factorial of x }

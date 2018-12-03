@@ -98,3 +98,8 @@ void MainWindow::on_createTreeBtn_clicked()
         }
     }
 }
+
+void MainWindow::on_exitBtn_clicked()
+{
+    exit(1);
+}

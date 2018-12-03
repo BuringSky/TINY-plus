@@ -25,6 +25,8 @@ private slots:
 
     void on_createTreeBtn_clicked();
 
+    void on_exitBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString curFile;    //保存当前文件的路径
